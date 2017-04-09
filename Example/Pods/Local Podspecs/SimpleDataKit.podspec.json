@@ -1,0 +1,22 @@
+{
+  "name": "SimpleDataKit",
+  "version": "0.1.0",
+  "summary": "A short description of SimpleDataKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/491078160@qq.com/SimpleDataKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "491078160@qq.com": "harley.gb@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/491078160@qq.com/SimpleDataKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SimpleDataKit/Classes/**/*"
+}

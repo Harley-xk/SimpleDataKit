@@ -1,0 +1,16 @@
+PODS:
+  - SimpleDataKit (0.1.0)
+
+DEPENDENCIES:
+  - SimpleDataKit (from `../`)
+
+EXTERNAL SOURCES:
+  SimpleDataKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SimpleDataKit: 681ae45ceb23a516b15313eaff6cecbd778c13d6
+
+PODFILE CHECKSUM: 6fcda506bd8682ced441e1e500798a542e556712
+
+COCOAPODS: 1.2.0

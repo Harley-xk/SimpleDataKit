@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SimpleDataKit
 //
-//  Created by 491078160@qq.com on 04/07/2017.
-//  Copyright (c) 2017 491078160@qq.com. All rights reserved.
+//  Created by Harley-xk on 04/07/2017.
+//  Copyright (c) 2017 Harley. All rights reserved.
 //
 
 import UIKit
