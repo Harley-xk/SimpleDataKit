@@ -89,6 +89,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Students" id="AZF-RW-23F">
+                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="wYQ-Bn-hQB">
+                            <connections>
+                                <segue destination="cyk-bZ-5Ov" kind="show" id="Ddt-tT-dyf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tfJ-e8-Y3P">
                             <connections>
                                 <segue destination="0zb-Qm-gC7" kind="show" id="u3m-iy-4Kw"/>
@@ -102,6 +107,116 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="645.60000000000002" y="160.56971514242881"/>
+        </scene>
+        <!--Searching-->
+        <scene sceneID="nfx-Rn-apj">
+            <objects>
+                <viewController id="cyk-bZ-5Ov" customClass="SearchingViewController" customModule="SimpleDataKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="awX-bb-9Bn"/>
+                        <viewControllerLayoutGuide type="bottom" id="lo2-we-grE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ed7-73-xum">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncf-1P-KDi">
+                                <rect key="frame" x="94" y="72" width="265" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="do5-rn-yhg">
+                                <rect key="frame" x="16" y="76.5" width="70" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="1Wy-lJ-Qfc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Relation:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZj-tZ-Mdt">
+                                <rect key="frame" x="16" y="114" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLe-eD-TKT">
+                                <rect key="frame" x="16" y="151.5" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7U2-0e-9g9">
+                                <rect key="frame" x="94" y="111" width="265" height="29"/>
+                                <segments>
+                                    <segment title="&lt;"/>
+                                    <segment title="="/>
+                                    <segment title="&gt;"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHh-kb-PcE">
+                                <rect key="frame" x="16" y="185" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vGB-Hh-Or0"/>
+                                </constraints>
+                                <state key="normal" title="Search"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchAction:" destination="cyk-bZ-5Ov" eventType="touchUpInside" id="7jz-oW-wNq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="god-aR-rXA">
+                                <rect key="frame" x="94" y="147" width="265" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WHh-kb-PcE" firstAttribute="trailing" secondItem="ed7-73-xum" secondAttribute="trailingMargin" id="6aN-Ou-kZo"/>
+                            <constraint firstItem="tLe-eD-TKT" firstAttribute="leading" secondItem="do5-rn-yhg" secondAttribute="leading" id="CPu-n6-bHa"/>
+                            <constraint firstItem="do5-rn-yhg" firstAttribute="leading" secondItem="ed7-73-xum" secondAttribute="leadingMargin" id="Duv-hU-ILe"/>
+                            <constraint firstItem="tZj-tZ-Mdt" firstAttribute="centerY" secondItem="7U2-0e-9g9" secondAttribute="centerY" id="M5t-Fp-3af"/>
+                            <constraint firstItem="7U2-0e-9g9" firstAttribute="leading" secondItem="ncf-1P-KDi" secondAttribute="leading" id="Myi-MD-uGw"/>
+                            <constraint firstItem="WHh-kb-PcE" firstAttribute="top" secondItem="god-aR-rXA" secondAttribute="bottom" constant="8" id="RSr-Qh-Qib"/>
+                            <constraint firstItem="ncf-1P-KDi" firstAttribute="trailing" secondItem="ed7-73-xum" secondAttribute="trailingMargin" id="RyY-x0-fYu"/>
+                            <constraint firstItem="WHh-kb-PcE" firstAttribute="leading" secondItem="ed7-73-xum" secondAttribute="leadingMargin" id="TAs-H7-YRj"/>
+                            <constraint firstItem="ncf-1P-KDi" firstAttribute="top" secondItem="awX-bb-9Bn" secondAttribute="bottom" constant="8" id="TbV-Ae-5NK"/>
+                            <constraint firstItem="tZj-tZ-Mdt" firstAttribute="width" secondItem="do5-rn-yhg" secondAttribute="width" id="ZdI-hL-skg"/>
+                            <constraint firstItem="ncf-1P-KDi" firstAttribute="leading" secondItem="do5-rn-yhg" secondAttribute="trailing" constant="8" id="aiP-0k-0iO"/>
+                            <constraint firstItem="god-aR-rXA" firstAttribute="top" secondItem="7U2-0e-9g9" secondAttribute="bottom" constant="8" id="hnP-hJ-uY7"/>
+                            <constraint firstItem="tZj-tZ-Mdt" firstAttribute="leading" secondItem="do5-rn-yhg" secondAttribute="leading" id="k7U-kd-8C8"/>
+                            <constraint firstItem="7U2-0e-9g9" firstAttribute="top" secondItem="ncf-1P-KDi" secondAttribute="bottom" constant="9" id="mNv-qi-mOz"/>
+                            <constraint firstItem="do5-rn-yhg" firstAttribute="centerY" secondItem="ncf-1P-KDi" secondAttribute="centerY" id="o8m-M4-ULG"/>
+                            <constraint firstItem="7U2-0e-9g9" firstAttribute="trailing" secondItem="ncf-1P-KDi" secondAttribute="trailing" id="rIl-sD-k7W"/>
+                            <constraint firstItem="god-aR-rXA" firstAttribute="leading" secondItem="tLe-eD-TKT" secondAttribute="trailing" constant="8" id="uVi-2g-WXY"/>
+                            <constraint firstItem="god-aR-rXA" firstAttribute="trailing" secondItem="ncf-1P-KDi" secondAttribute="trailing" id="wyk-uf-OKV"/>
+                            <constraint firstItem="tLe-eD-TKT" firstAttribute="trailing" secondItem="do5-rn-yhg" secondAttribute="trailing" id="xsS-X9-1kn"/>
+                            <constraint firstItem="tLe-eD-TKT" firstAttribute="centerY" secondItem="god-aR-rXA" secondAttribute="centerY" id="yMa-Nr-ISl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Searching" id="mEC-jg-i2B"/>
+                    <connections>
+                        <outlet property="fieldTextField" destination="ncf-1P-KDi" id="RLL-kp-2VI"/>
+                        <outlet property="relationSegement" destination="7U2-0e-9g9" id="Acy-8D-VQ4"/>
+                        <outlet property="targetTextField" destination="god-aR-rXA" id="dKC-B1-eMY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lmw-6f-YA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645.60000000000002" y="890.10494752623697"/>
         </scene>
         <!--Add Student-->
         <scene sceneID="5aW-bE-UrU">

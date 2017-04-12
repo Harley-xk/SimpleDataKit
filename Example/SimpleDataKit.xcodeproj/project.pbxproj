@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		C36926FE1E99D781003F35C7 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36926FD1E99D781003F35C7 /* AddStudentViewController.swift */; };
 		C3E5691E1E9E746C001FDD99 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5691D1E9E746C001FDD99 /* Student.swift */; };
+		C3E569221E9E80BA001FDD99 /* SearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E569211E9E80BA001FDD99 /* SearchingViewController.swift */; };
 		C3EE197F1E99E7170005575C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EE197E1E99E7170005575C /* TableViewDataSource.swift */; };
 		C3EE19831E9B8D100005575C /* Data.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = C3EE19821E9B8D100005575C /* Data.xcdatamodel */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		A7DF673DFF8E3E48057463BB /* Pods_SimpleDataKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDataKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36926FD1E99D781003F35C7 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
 		C3E5691D1E9E746C001FDD99 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		C3E569211E9E80BA001FDD99 /* SearchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchingViewController.swift; sourceTree = "<group>"; };
 		C3EE197E1E99E7170005575C /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		C3EE19821E9B8D100005575C /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		E3EFF4B95AEBD87B0F4E7890 /* Pods-SimpleDataKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDataKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDataKit_Example/Pods-SimpleDataKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				C36926FD1E99D781003F35C7 /* AddStudentViewController.swift */,
+				C3E569211E9E80BA001FDD99 /* SearchingViewController.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				C3EE197F1E99E7170005575C /* TableViewDataSource.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				C36926FE1E99D781003F35C7 /* AddStudentViewController.swift in Sources */,
+				C3E569221E9E80BA001FDD99 /* SearchingViewController.swift in Sources */,
 				C3E5691E1E9E746C001FDD99 /* Student.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
