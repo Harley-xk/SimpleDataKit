@@ -13,6 +13,10 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		C36926FE1E99D781003F35C7 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36926FD1E99D781003F35C7 /* AddStudentViewController.swift */; };
+		C3E5691E1E9E746C001FDD99 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5691D1E9E746C001FDD99 /* Student.swift */; };
+		C3EE197F1E99E7170005575C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EE197E1E99E7170005575C /* TableViewDataSource.swift */; };
+		C3EE19831E9B8D100005575C /* Data.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = C3EE19821E9B8D100005575C /* Data.xcdatamodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		8CCB27165B14E9402156DF75 /* Pods_SimpleDataKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDataKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01F5CADEC976FAD52E0EDC5 /* Pods-SimpleDataKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDataKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDataKit_Tests/Pods-SimpleDataKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A7DF673DFF8E3E48057463BB /* Pods_SimpleDataKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDataKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36926FD1E99D781003F35C7 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
+		C3E5691D1E9E746C001FDD99 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		C3EE197E1E99E7170005575C /* TableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		C3EE19821E9B8D100005575C /* Data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Data.xcdatamodel; sourceTree = "<group>"; };
 		E3EFF4B95AEBD87B0F4E7890 /* Pods-SimpleDataKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDataKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDataKit_Example/Pods-SimpleDataKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EA949F95684CED2820D6978E /* Pods-SimpleDataKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDataKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDataKit_Tests/Pods-SimpleDataKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,12 +96,10 @@
 		607FACD21AFB9204008FA782 /* Example for SimpleDataKit */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				C36927021E99D99C003F35C7 /* UI */,
+				C36927031E99D9C4003F35C7 /* Model */,
+				C36927041E99D9D0003F35C7 /* Utils */,
 			);
 			name = "Example for SimpleDataKit";
 			path = SimpleDataKit;
@@ -102,6 +108,8 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				C3EE19821E9B8D100005575C /* Data.xcdatamodel */,
 				607FACD41AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -115,6 +123,34 @@
 				6DB204CF188F1F5248DC7B83 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		C36927021E99D99C003F35C7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				C36926FD1E99D781003F35C7 /* AddStudentViewController.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		C36927031E99D9C4003F35C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3E5691D1E9E746C001FDD99 /* Student.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C36927041E99D9D0003F35C7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C3EE197E1E99E7170005575C /* TableViewDataSource.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +276,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EE19831E9B8D100005575C /* Data.xcdatamodel in Sources */,
+				C3EE197F1E99E7170005575C /* TableViewDataSource.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				C36926FE1E99D781003F35C7 /* AddStudentViewController.swift in Sources */,
+				C3E5691E1E9E746C001FDD99 /* Student.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

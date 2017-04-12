@@ -89,9 +89,11 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Comet/Comet.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SimpleDataKit/SimpleDataKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Comet/Comet.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SimpleDataKit/SimpleDataKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

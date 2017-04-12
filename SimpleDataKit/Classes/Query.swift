@@ -9,7 +9,10 @@
 import CoreData
 
 extension Query {
-    enum Relation: String {
+    /*
+     * Current avaliable relations on query
+     */
+    public enum Relation: String {
         case equal = "="
         case unequal = "!="
         case greaterThan = ">"
@@ -20,23 +23,23 @@ extension Query {
     }
 }
 
-class Query<Model: DataModel> {
+open class Query<Model: Queryable> {
     
+    /// add a setting about query params
     public func `where`(_ property: String, _ relation: Relation = .equal, _ target: Any) -> Self {
         let predicate = (property, relation.rawValue, target)
         predicates.append(predicate)
         return self
     }
     
+    /// add a setting about sort order
     public func sortBy(_ property: String, ascending: Bool = true) -> Self {
         let sort = NSSortDescriptor(key: property, ascending: ascending)
         sortDescriptors.append(sort)
         return self
     }
     
-    /// <#Description#>
-    ///
-    /// - Returns: <#return value description#>
+    /// Get objects by current settings
     public func get() -> [Model] {
         let request = setupFetchRequest()
         do {
@@ -48,6 +51,7 @@ class Query<Model: DataModel> {
         }
     }
     
+    /// results count by current settings, speed up by avoiding to fetching objects
     public func count() -> Int {
         let request = setupFetchRequest()
         do {
@@ -59,16 +63,32 @@ class Query<Model: DataModel> {
         }
     }
     
+    /// Fetch results with pagination settings
+    public func paginate(page: Int = 0, size: Int = 0) -> [Model] {
+        self.pageIndex = page
+        self.pageSize = size
+        return self.get()
+    }
+    
+    /// FetchRequest by current settings
+    public var fetchRequest: NSFetchRequest<Model> {
+        return setupFetchRequest()
+    }
+    
     // MARK: - Private
     private typealias PredicateUnit = (property: String, relation: String, target: Any)
     private var predicates: [PredicateUnit] = []
     
     private var sortDescriptors: [NSSortDescriptor] = []
     
+    // paginate
+    private var pageIndex: Int = 0
+    private var pageSize: Int = 0
+
     private func setupFetchRequest() -> NSFetchRequest<Model> {
         
         let fetchRequest = NSFetchRequest<Model>(entityName: Model.entityName)
-        // 组装谓词
+        // predicates
         if predicates.count > 0 {
             var string = "\(predicates[0].property) \(predicates[0].relation) %@"
             var values: [Any] = [predicates[0].target]
@@ -78,8 +98,12 @@ class Query<Model: DataModel> {
             }
             fetchRequest.predicate = NSPredicate(format: string, argumentArray: values)
         }
-        // 设置排序
+        // order
         fetchRequest.sortDescriptors = sortDescriptors
+        // paginate
+        fetchRequest.fetchOffset = pageIndex * pageSize
+        fetchRequest.fetchLimit = pageSize
+        
         return fetchRequest
     }
 }

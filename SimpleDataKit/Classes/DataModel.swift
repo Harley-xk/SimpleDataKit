@@ -8,41 +8,17 @@
 
 import CoreData
 
+public protocol Managed {
+    static var entityName: String { get }
+}
+
 open class DataModel: NSManagedObject, Managed {
-    
-    
-    // MARK: - Private
-    static var entityName: String {
+    public static var entityName: String {
         if #available(iOS 10.0, *) {
             return entity().name!
         } else {
             return classNameWithoutModule
         }
-    }
-}
-
-// MARK: - Query
-extension DataModel {
-    static func create() -> Self {
-        return DataManager.shared.context.insertObject()
-    }
-    
-    @discardableResult func save() -> Bool {
-        if !self.isInserted {
-            DataManager.shared.context.insert(self)
-        }
-        return DataManager.shared.save()
-    }
-    
-    func delete() {
-        DataManager.shared.context.delete(self)
-    }
-}
-
-extension DataModel {
-    static func find<Self>(where property: String, _ relation: Query<Self>.Relation, _ target: Any) -> Query<Self> {
-        let query = Query<Self>()
-        return query.where(property, relation, target)
     }
 }
 

@@ -1,11 +1,9 @@
 use_frameworks!
 
 target 'SimpleDataKit_Example' do
-  pod 'SimpleDataKit', :path => '../'
+ 
+ pod 'Comet', :git => 'https://github.com/Harley-xk/Comet.git'
 
-  target 'SimpleDataKit_Tests' do
-    inherit! :search_paths
+ pod 'SimpleDataKit', :path => '../'
 
-    
-  end
 end

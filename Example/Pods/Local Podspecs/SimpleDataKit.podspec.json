@@ -1,9 +1,9 @@
 {
   "name": "SimpleDataKit",
   "version": "0.1.0",
-  "summary": "A short description of SimpleDataKit.",
+  "summary": "SimpleDataKit is a simple ORM framework based on CoreData. And is Inspired by Eloquent in Laravel.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/491078160@qq.com/SimpleDataKit",
+  "homepage": "https://github.com/Harley-xk/SimpleDataKit",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "491078160@qq.com": "harley.gb@foxmail.com"
   },
   "source": {
-    "git": "https://github.com/491078160@qq.com/SimpleDataKit.git",
+    "git": "https://github.com/Harley-xk/SimpleDataKit.git",
     "tag": "0.1.0"
   },
   "platforms": {

@@ -1,16 +1,26 @@
 PODS:
+  - Comet (0.3.1)
   - SimpleDataKit (0.1.0)
 
 DEPENDENCIES:
+  - Comet (from `https://github.com/Harley-xk/Comet.git`)
   - SimpleDataKit (from `../`)
 
 EXTERNAL SOURCES:
+  Comet:
+    :git: https://github.com/Harley-xk/Comet.git
   SimpleDataKit:
     :path: "../"
 
-SPEC CHECKSUMS:
-  SimpleDataKit: 681ae45ceb23a516b15313eaff6cecbd778c13d6
+CHECKOUT OPTIONS:
+  Comet:
+    :commit: a38eab9d0851cd17ddfce9000a1a622465e0d3f3
+    :git: https://github.com/Harley-xk/Comet.git
 
-PODFILE CHECKSUM: 6fcda506bd8682ced441e1e500798a542e556712
+SPEC CHECKSUMS:
+  Comet: df5a678a4a4d21d65fc6b18b02a84347be127d6a
+  SimpleDataKit: d912c345b24da2e8143970d39ad0380223289fe9
+
+PODFILE CHECKSUM: d75d2f92f0bc17f09daeffb0bf879dfcba3958e6
 
 COCOAPODS: 1.2.0
