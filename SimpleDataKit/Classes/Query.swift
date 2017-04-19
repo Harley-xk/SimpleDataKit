@@ -30,25 +30,38 @@ extension Query {
 
 open class Query<Model: Queryable> {
     
-    /// add a setting about query params
+    
+    /// Basic query with 'and'
     public func `where`(_ property: String, _ relation: Relation = .equal, _ target: Any) -> Self {
         return addPredicateUnit(property, relation, target, combination: .and)
     }
     
+    /// Basic query with 'or'
     public func or(_ property: String, _ relation: Relation = .equal, _ target: Any) -> Self {
         return addPredicateUnit(property, relation, target, combination: .or)
     }
     
+    /// Nested query with 'and'
     public func `where`(_ block: (Query<Model>) -> ()) -> Self {
         let query = Query<Model>()
         block(query)
         return addNestedPredicate(with: query, combination: .and)
     }
     
+    /// Nested query with 'or'
     public func or(_ block: (Query<Model>) -> ()) -> Self {
         let query = Query<Model>()
         block(query)
         return addNestedPredicate(with: query, combination: .or)
+    }
+    
+    /// 'in' query with 'and', search results where value of the property is in vaules specified
+    public func `where`(_ property: String, in values: [Any]) -> Self {
+        return add_IN_Predicate(property: property, targets: values, combination: .and)
+    }
+    
+    public func `in`(_ property: String, in values: [Any]) -> Self {
+        return add_IN_Predicate(property: property, targets: values, combination: .or)
     }
     
     /// add a setting about sort order
@@ -123,21 +136,34 @@ open class Query<Model: Queryable> {
 
 // MARK: - Private Predicates
 extension Query {
-    fileprivate func addPredicateUnit(_ property: String, _ relation: Relation, _ target: Any, combination: Combination) -> Self {
+    
+    fileprivate func addPredicateformat(_ format: String, combination: Combination) {
         if predicateformat.characters.count > 0 {
             predicateformat += " \(combination.rawValue) "
         }
-        predicateformat += "\(property) \(relation.rawValue) %@"
+        predicateformat += format
+    }
+
+    fileprivate func addPredicateUnit(_ property: String, _ relation: Relation, _ target: Any, combination: Combination) -> Self {
+        addPredicateformat("\(property) \(relation.rawValue) %@", combination: combination)
         predicateValues.append(target)
         return self
     }
     
     fileprivate func addNestedPredicate(with query: Query, combination: Combination) -> Self {
-        if predicateformat.characters.count > 0 {
-            predicateformat += " \(combination.rawValue) "
-        }
-        predicateformat += "(\(query.predicateformat))"
+        addPredicateformat("(\(query.predicateformat))", combination: combination)
         predicateValues.append(contentsOf: query.predicateValues)
+        return self
+    }
+    
+    fileprivate func add_IN_Predicate(property: String, targets: [Any], combination: Combination) -> Self {
+        var formats = [String]()
+        for _ in 0 ..< targets.count {
+            formats.append("%@")
+        }
+        let format = "\(property) in {\(formats.joined(separator: ","))}"
+        addPredicateformat(format, combination: combination)
+        predicateValues.append(contentsOf: targets)
         return self
     }
 }
