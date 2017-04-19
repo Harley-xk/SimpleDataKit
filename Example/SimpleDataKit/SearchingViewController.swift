@@ -32,7 +32,6 @@ class SearchingViewController: UIViewController {
         
         let students: [Student] = Student.find(where: fieldTextField.text ?? "", relations[relationSegement.selectedSegmentIndex], targetTextField.text!).get()
         print(students)
-        
     }
 
     /*

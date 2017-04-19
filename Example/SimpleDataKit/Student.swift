@@ -29,7 +29,9 @@ final class Student : DataModel, FetchControled {
     }
     
     static var defaultFetchingRequest: NSFetchRequest<Student> {
-        return Student.all().sortBy("score", ascending: false).fetchRequest
+        return Student.all().where({ (query) in
+            _ = query.where("score", .greaterThan, 32).or("score", .lessThan, 25)
+        }).sortBy("score", ascending: false).fetchRequest
     }
 }
 

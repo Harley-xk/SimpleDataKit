@@ -21,15 +21,34 @@ extension Query {
         case lessThanOrEqual = "<="
         case like = "like"
     }
+    
+    enum Combination: String {
+        case and = "and"
+        case or = "or"
+    }
 }
 
 open class Query<Model: Queryable> {
     
     /// add a setting about query params
     public func `where`(_ property: String, _ relation: Relation = .equal, _ target: Any) -> Self {
-        let predicate = (property, relation.rawValue, target)
-        predicates.append(predicate)
-        return self
+        return addPredicateUnit(property, relation, target, combination: .and)
+    }
+    
+    public func or(_ property: String, _ relation: Relation = .equal, _ target: Any) -> Self {
+        return addPredicateUnit(property, relation, target, combination: .or)
+    }
+    
+    public func `where`(_ block: (Query<Model>) -> ()) -> Self {
+        let query = Query<Model>()
+        block(query)
+        return addNestedPredicate(with: query, combination: .and)
+    }
+    
+    public func or(_ block: (Query<Model>) -> ()) -> Self {
+        let query = Query<Model>()
+        block(query)
+        return addNestedPredicate(with: query, combination: .or)
     }
     
     /// add a setting about sort order
@@ -76,27 +95,21 @@ open class Query<Model: Queryable> {
     }
     
     // MARK: - Private
-    private typealias PredicateUnit = (property: String, relation: String, target: Any)
-    private var predicates: [PredicateUnit] = []
+    fileprivate var predicateformat: String = ""
+    fileprivate var predicateValues: [Any] = []
     
-    private var sortDescriptors: [NSSortDescriptor] = []
+    fileprivate var sortDescriptors: [NSSortDescriptor] = []
     
     // paginate
-    private var pageIndex: Int = 0
-    private var pageSize: Int = 0
+    fileprivate var pageIndex: Int = 0
+    fileprivate var pageSize: Int = 0
 
-    private func setupFetchRequest() -> NSFetchRequest<Model> {
+    fileprivate func setupFetchRequest() -> NSFetchRequest<Model> {
         
         let fetchRequest = NSFetchRequest<Model>(entityName: Model.entityName)
-        // predicates
-        if predicates.count > 0 {
-            var string = "\(predicates[0].property) \(predicates[0].relation) %@"
-            var values: [Any] = [predicates[0].target]
-            for i in 1 ..< predicates.count {
-                string += " and " + "\(predicates[i].property) \(predicates[i].relation) %@"
-                values.append(predicates[i].target)
-            }
-            fetchRequest.predicate = NSPredicate(format: string, argumentArray: values)
+        // predicate
+        if predicateformat.characters.count > 0 {
+            fetchRequest.predicate = NSPredicate(format: predicateformat, argumentArray: predicateValues)
         }
         // order
         fetchRequest.sortDescriptors = sortDescriptors
@@ -105,5 +118,26 @@ open class Query<Model: Queryable> {
         fetchRequest.fetchLimit = pageSize
         
         return fetchRequest
+    }
+}
+
+// MARK: - Private Predicates
+extension Query {
+    fileprivate func addPredicateUnit(_ property: String, _ relation: Relation, _ target: Any, combination: Combination) -> Self {
+        if predicateformat.characters.count > 0 {
+            predicateformat += " \(combination.rawValue) "
+        }
+        predicateformat += "\(property) \(relation.rawValue) %@"
+        predicateValues.append(target)
+        return self
+    }
+    
+    fileprivate func addNestedPredicate(with query: Query, combination: Combination) -> Self {
+        if predicateformat.characters.count > 0 {
+            predicateformat += " \(combination.rawValue) "
+        }
+        predicateformat += "(\(query.predicateformat))"
+        predicateValues.append(contentsOf: query.predicateValues)
+        return self
     }
 }
