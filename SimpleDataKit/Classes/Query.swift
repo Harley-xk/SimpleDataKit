@@ -32,12 +32,12 @@ open class Query<Model: Queryable> {
     
     
     /// Basic query with 'and'
-    public func `where`(_ property: String, _ relation: Relation = .equal, _ target: Any) -> Self {
+    public func `where`(_ property: String, _ relation: Relation = .equal, to target: Any) -> Self {
         return addPredicateUnit(property, relation, target, combination: .and)
     }
     
     /// Basic query with 'or'
-    public func or(_ property: String, _ relation: Relation = .equal, _ target: Any) -> Self {
+    public func or(_ property: String, _ relation: Relation = .equal, to target: Any) -> Self {
         return addPredicateUnit(property, relation, target, combination: .or)
     }
     
@@ -60,7 +60,7 @@ open class Query<Model: Queryable> {
         return add_IN_Predicate(property: property, targets: values, combination: .and)
     }
     
-    public func `in`(_ property: String, in values: [Any]) -> Self {
+    public func `or`(_ property: String, in values: [Any]) -> Self {
         return add_IN_Predicate(property: property, targets: values, combination: .or)
     }
     

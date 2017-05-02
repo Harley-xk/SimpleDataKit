@@ -34,7 +34,7 @@ extension DataModel: Queryable {
 extension DataModel {
     open static func find<Self>(where property: String, _ relation: Query<Self>.Relation = .equal, _ target: Any) -> Query<Self> {
         let query = Query<Self>()
-        return query.where(property, relation, target)
+        return query.where(property, relation, to: target)
     }
     
     open static func all<Self>() -> Query<Self> {
