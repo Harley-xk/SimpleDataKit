@@ -30,7 +30,7 @@ class SearchingViewController: UIViewController {
     
     @IBAction func searchAction(_ sender: Any) {
         
-        let students: [Student] = Student.find(where: fieldTextField.text ?? "", relations[relationSegement.selectedSegmentIndex], targetTextField.text!).get()
+        let students: [Student] = Student.find(where: fieldTextField.text ?? "", relations[relationSegement.selectedSegmentIndex], to: targetTextField.text!).get()
         print(students)
     }
 

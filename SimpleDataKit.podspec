@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleDataKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'SimpleDataKit is a simple ORM framework based on CoreData. And is Inspired by Eloquent in Laravel.'
 
 # This description is used to generate tags and improve search results.

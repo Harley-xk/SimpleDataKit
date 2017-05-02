@@ -9,7 +9,7 @@
 import CoreData
 
 public protocol Queryable: Managed, NSFetchRequestResult {
-    static func find<Self>(where property: String, _ relation: Query<Self>.Relation, _ target: Any) -> Query<Self>
+    static func find<Self>(where property: String, _ relation: Query<Self>.Relation, to target: Any) -> Query<Self>
     static func all<Self>() -> Query<Self>
 }
 
@@ -32,7 +32,7 @@ extension DataModel: Queryable {
 }
 
 extension DataModel {
-    open static func find<Self>(where property: String, _ relation: Query<Self>.Relation = .equal, _ target: Any) -> Query<Self> {
+    open static func find<Self>(where property: String, _ relation: Query<Self>.Relation = .equal, to target: Any) -> Query<Self> {
         let query = Query<Self>()
         return query.where(property, relation, to: target)
     }
