@@ -20,9 +20,6 @@ extension DataModel: Queryable {
     }
     
     @discardableResult open func save() -> Bool {
-        if !self.isInserted {
-            DataManager.shared.context.insert(self)
-        }
         return DataManager.shared.save()
     }
     

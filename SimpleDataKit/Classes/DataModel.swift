@@ -20,6 +20,10 @@ open class DataModel: NSManagedObject, Managed {
             return classNameWithoutModule
         }
     }
+    
+    public var identifier: String {
+        return objectID.uriRepresentation().absoluteString
+    }
 }
 
 extension NSManagedObjectContext {
