@@ -15,20 +15,6 @@ public protocol Queryable: Managed, NSFetchRequestResult {
 
 // MARK: - Query
 extension DataModel: Queryable {
-    open static func create() -> Self {
-        return DataManager.shared.context.insertObject()
-    }
-    
-    @discardableResult open func save() -> Bool {
-        return DataManager.shared.save()
-    }
-    
-    open func delete() {
-        DataManager.shared.context.delete(self)
-    }
-}
-
-extension DataModel {
     open static func find<Self>(where property: String, _ relation: Query<Self>.Relation = .equal, to target: Any) -> Query<Self> {
         let query = Query<Self>()
         return query.where(property, relation, to: target)

@@ -40,6 +40,11 @@ public extension Date {
         formatter.timeZone = timeZone
         return formatter.string(from: self)
     }
+    
+    /// 转换为年月日的字符串
+    public func dateString() -> String {
+        return string(format: "yyyy-MM-dd")
+    }
 
     /// 日期计算，返回当前日期加上指定单位值之后的日期，会自动进位或减位
     /// 返回计算后的新日期
@@ -95,6 +100,46 @@ public extension Date {
         var components = calendar.dateComponents([.weekday], from: self)
         components.timeZone = TimeZone.current
         return (components.weekday ?? 1) - 1
+    }
+    
+    // 两个日期相隔的分钟数
+    public func minutesSince(_ date: Date) -> Double {
+        let timeInterval = timeIntervalSince(date)
+        let minute = timeInterval / 60
+        return minute
+    }
+    
+    // 两个日期相隔的小时数
+    public func hoursSince(_ date: Date) -> Double {
+        let minute = minutesSince(date)
+        return minute / 60
+    }
+    
+    /// 两个日期相隔的天数
+    ///
+    /// - Parameters:
+    ///   - date: 与当前日期比较的日期
+    ///   - withoutTime: 是否忽略精确的时分秒，可以启用该属性来比较两个日期的物理天数（即昨天、前天等）
+    /// - Returns: 天数
+    public func daysSince(_ date: Date, withoutTime: Bool = false) -> Double {
+        var date1 = self
+        var date2 = date
+        if withoutTime {
+            date1 = self.withoutTime
+            date2 = date.withoutTime
+        }
+        let hours = date1.hoursSince(date2)
+        return hours / 24
+    }
+    
+    
+    /// 判断两个日期是否在同一天内
+    public func isSameDay(as date: Date?) -> Bool {
+        guard let date = date else {
+            return false
+        }
+        let days = daysSince(date, withoutTime: true)
+        return days == 0
     }
 }
 

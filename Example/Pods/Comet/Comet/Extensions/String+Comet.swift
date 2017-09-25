@@ -143,12 +143,12 @@ public extension String {
     
     public func height(limitToWidth width: CGFloat, font: UIFont) -> CGFloat {
         let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
-        return self.size(limitToSize: size, font: font).width
+        return self.size(limitToSize: size, font: font).height
     }
     
     public func size(limitToSize size: CGSize, font: UIFont) -> CGSize {
         let string = self as NSString
-        let rect = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:font], context: nil)
+        let rect = string.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font:font], context: nil)
         return rect.size
     }
 }

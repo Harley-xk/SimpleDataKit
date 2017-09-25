@@ -24,6 +24,18 @@ open class DataModel: NSManagedObject, Managed {
     public var identifier: String {
         return objectID.uriRepresentation().absoluteString
     }
+    
+    open static func create() -> Self {
+        return DataManager.shared.context.insertObject()
+    }
+    
+    @discardableResult open func save() -> Bool {
+        return DataManager.shared.save()
+    }
+    
+    open func delete() {
+        DataManager.shared.context.delete(self)
+    }
 }
 
 extension NSManagedObjectContext {

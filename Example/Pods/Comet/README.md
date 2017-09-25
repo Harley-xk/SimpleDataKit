@@ -1,6 +1,7 @@
 # ![](Images/img_0.png) Comet
 
 iOS 项目的 Swift 基础库，提供大量常用组件、便利方法等。支持 **Swift 3.0+**
+1.0.0 起支持 Swift 4.0+，需要支持 Swift 请使用 0.7.5 版本。
 
 基于 HKProjectBase 库，根据 Swift 3 的语法特性，重新实现了大部分的逻辑, 移除了部分不常用／不成熟的代码。
 
@@ -8,7 +9,10 @@ iOS 项目的 Swift 基础库，提供大量常用组件、便利方法等。支
 支持 CocoaPods 安装：
 
 ```ruby
+# for swift 4.0 +
 pod 'Comet', :git => 'https://github.com/Harley-xk/Comet.git'
+# for swift 3.1/3.2 +
+pod 'Comet', :git => 'https://github.com/Harley-xk/Comet.git, :tag=>0.7.5'
 ```
 
 ### API 清单
@@ -54,12 +58,17 @@ pod 'Comet', :git => 'https://github.com/Harley-xk/Comet.git'
 
 用法：
 
-1. 创建需要进行索引的对象数组，因为索引器在获取属性时使用了 ***KVC*** 的方式来获取对象对应属性的值，因此要求数据对象必须是 NSObject 的子类。
+1. 创建需要进行索引的对象数组。~~因为索引器在获取属性时使用了 ***KVC*** 的方式来获取对象对应属性的值，因此要求数据对象必须是 NSObject 的子类。~~ 
+
+	0.5 及以上版本更新使用协议来实现，不再要求继承 NSObject，参见第 5 点。
+	
 2. 创建拼音索引器，构造函数需要两个参数：***对象数组*** 和索引所依据的 ***属性键值***。
 3. 索引器创建时会直接进行索引任务，对大量数据进行索引时考虑到性能问题，不建议在主线程处理。
 4. 索引器创建完成后，可以通过 ***indexedObjects*** 和 ***indexedTitles*** 属性获得索引的结果
 	- ***indexedObjects*** 是一个二维数组，其中是根据索引顺序排序好的对象数组
 	- ***indexedTitles*** 是索引后的拼音首字母的数组
+
+5. 0.5.0 更新：使用协议的方式代替 KVC，解除了数据对象必须为 NSObject 子类的限制。使用时，声明数据类实现`PinyinIndexable`协议，然后通过`var valueToPinyin: String { get }`这个协议方法，返回需要转换为拼音的属性即可。
 
 ##### 5. TaskRecorder —— 任务记录器
 App 的基本功能就是执行各种任务，比如网络任务。正常情况下，发起的任务都能执行完毕并返回结果。在某些情况下，任务并不能或者没有必要执行完毕。比如在一个视图控制器中发起了一个网络请求来获取数据，以显示在当前界面上；但是在请求执行完毕之前，用户操作退出了该界面，此时往往没有必要再继续执行这个请求，因此需要程序作出处理，取消这个网络任务的执行。当一个界面中的网络任务较多时，手动处理这些逻辑就会变得繁琐且容易出错。
@@ -321,6 +330,38 @@ DispatchQueue.global().asyncAfter(delay: .nanoseconds(2)) {
 }
 ```
 
+##### 8. KVO & 闭包
+KVO 是 Foundation 框架强大的功能之一，但是由于不支持闭包，导致实现起来比较繁琐。注册和实际处理的代码需要写在不同的地方，对于一些轻量级的逻辑来说并不十分友好。
+
+通过 NSObject+KVOHandler 扩展，可以在注册 KVO 观察者时直接提供一个闭包来实现了。比如下面的代码实现了观察 ScrollView 的 contentOffset 的变化，可以比较一下原来的实现方式和闭包形式的实现方式。
+
+原来的实现：
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    scrollView.addObserver(self, forKeyPath: "contentOffset", context: nil)
+}
+
+override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    if keyPath == "contentOffset" {
+        // Do something
+    }
+}
+```
+
+使用闭包实现：
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    scrollView.addObserver(for: "contentOffset") { (_, _, _) in
+        // Do something
+    }
+}
+```
 
 ### 移除
 1. 移除 MD5 编码、RC4 加密等相关内容。推荐使用 [CryptoSwift](https://github.com/krzyzanowskim/CryptoSwift)， 更加成熟的加密框架，支持更广泛的加密协议。

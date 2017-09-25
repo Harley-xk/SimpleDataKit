@@ -36,6 +36,11 @@ open class Path {
         return NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0].path
     }
     
+    /// 获取沙盒 Cache 路径
+    open class func cache() -> Path {
+        return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0].path
+    }
+    
     /// 获取沙盒 Temp 路径
     open class func temp() -> Path {
         return NSTemporaryDirectory().path
@@ -138,17 +143,17 @@ open class Path {
         }
         let mb = kb/1024.0;
         if (mb < 1) {
-            return "\(kb)KB"
+            return String(format: "%.0fKB", kb)
         }
         let gb = mb/1024.0;
         if (gb < 1) {
-            return "\(mb)M"
+            return String(format: "%.1fMB", mb)
         }
         let tb = gb/1024.0;
         if (tb < 1) {
-            return "\(gb)G"
-        }else{
-            return "\(tb)T"
+            return String(format: "%.1fG", gb)
+        } else {
+            return String(format: "%.1fT", tb)
         }
     }
     
