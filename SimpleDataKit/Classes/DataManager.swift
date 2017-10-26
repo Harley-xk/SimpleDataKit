@@ -55,10 +55,10 @@ open class DataManager {
             try context.save()
             return true
         } catch {
-            context.rollback()
             #if DEBUG
                 print("SimpleDataKit: Model saving failed: \(error.localizedDescription)")
             #endif
+//            context.rollback()
             return false
         }
     }

@@ -1,6 +1,6 @@
 PODS:
   - Comet (1.0.0)
-  - SimpleDataKit (0.2.0)
+  - SimpleDataKit (0.3.0)
 
 DEPENDENCIES:
   - Comet (from `https://github.com/Harley-xk/Comet.git`)
@@ -19,7 +19,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Comet: 8f5f04e5bb30f47aeb5f4a83374081770545585e
-  SimpleDataKit: 04b0169b6adec39140271aa4525e7dcf2508688a
+  SimpleDataKit: 20e339d76112fc0248d7d850e3bd885884c26894
 
 PODFILE CHECKSUM: d75d2f92f0bc17f09daeffb0bf879dfcba3958e6
 
