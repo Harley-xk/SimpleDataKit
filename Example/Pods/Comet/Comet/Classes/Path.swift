@@ -22,7 +22,7 @@ open class Path {
     open var string: String
     
     /// URL 实例
-    open var url: URL? {
+    open var url: URL {
         return URL(fileURLWithPath: string)
     }
     
@@ -90,7 +90,7 @@ open class Path {
     open var fileExist: (exist: Bool, isFile: Bool) {
         var isDirectory = ObjCBool(false)
         let exist = fileManager.fileExists(atPath: string, isDirectory: &isDirectory)
-        return (exist, isDirectory.boolValue)
+        return (exist, !isDirectory.boolValue)
     }
     
     /// 文件扩展名
@@ -175,7 +175,7 @@ open class Path {
         if fileExist.exist && !fileExist.isFile {
             if let contents = try? fileManager.contentsOfDirectory(atPath: string) {
                 for file in contents {
-                    let path = file.path
+                    let path = resource(file)
                     let subFileExist = path.fileExist
                     if subFileExist.exist {
                         if subFileExist.isFile {
@@ -202,7 +202,7 @@ public extension Bundle
         let path = name as NSString
         let pathExtension = path.pathExtension
         var nameWithoutExtension = name
-        if pathExtension.characters.count > 0{
+        if !pathExtension.isEmpty {
             nameWithoutExtension = path.deletingPathExtension
         }
         let string = self.path(forResource: nameWithoutExtension, ofType: pathExtension)

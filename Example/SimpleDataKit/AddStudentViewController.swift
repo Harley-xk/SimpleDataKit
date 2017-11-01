@@ -46,7 +46,7 @@ class AddStudentViewController: UITableViewController {
     }
     
     private func saveAction() {
-        guard let name = nameTextField.text, name.characters.count > 0 else {
+        guard let name = nameTextField.text, !name.isEmpty else {
             let alert = UIAlertController(title: "Error", message: "Name can't be nil", preferredStyle: .alert)
             let action = UIAlertAction(title: "OK", style: .cancel)
             alert.addAction(action)
