@@ -121,7 +121,7 @@ open class Query<Model: Queryable> {
         
         let fetchRequest = NSFetchRequest<Model>(entityName: Model.entityName)
         // predicate
-        if predicateformat.characters.count > 0 {
+        if !predicateformat.isEmpty {
             fetchRequest.predicate = NSPredicate(format: predicateformat, argumentArray: predicateValues)
         }
         // order
@@ -138,7 +138,7 @@ open class Query<Model: Queryable> {
 extension Query {
     
     fileprivate func addPredicateformat(_ format: String, combination: Combination) {
-        if predicateformat.characters.count > 0 {
+        if !predicateformat.isEmpty {
             predicateformat += " \(combination.rawValue) "
         }
         predicateformat += format
