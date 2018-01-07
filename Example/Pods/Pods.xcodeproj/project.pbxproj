@@ -11,6 +11,8 @@
 		0D2AD533423EFE50FEDDF23721A84A47 /* UIVIew+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288D775A7B259612014B3CE50E4F3D2D /* UIVIew+Comet.swift */; };
 		0F4A39F5F3FAEDA91480D0F1742C61F3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1605B70C5C58B046CC4C77E07600B1 /* Path.swift */; };
 		1E1A88BF4C855684FC07F55542F21F53 /* Pods-SimpleDataKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DF95FF56DC103DC11958A0CF8BC661AF /* Pods-SimpleDataKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2295B0EE95463EFF0F7FF7561745B8ED /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A601A181BBCFCE2FDB31257BBCC19F7 /* DataModel.swift */; };
+		2E420730CE145FDC0AF35A5A6C747901 /* DataModel+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5761AF40323649F4511D368A42B2031 /* DataModel+Query.swift */; };
 		347E54328F5E84CBB9E4DAC8D27A2921 /* Text+Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB063396F9B8EE5826C3D57246DCA4B /* Text+Localize.swift */; };
 		45BC07201FCC55E868FBCCB16C1407BB /* UIScrollView+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3716D479F74096264A0157A9669637 /* UIScrollView+Comet.swift */; };
 		4B929FE413688B21943934B3CC7483E3 /* UIColor+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14F5C7DC7E17B2F097AC1D5E0C02901 /* UIColor+Comet.swift */; };
@@ -20,26 +22,27 @@
 		66C874AB53786CFA6D69A49B5E921933 /* HairLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F98CEB54A11201D754DD0B193545F /* HairLine.swift */; };
 		68D918D17AC63F15009988BCD0705793 /* UITextField+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69E57EACE7AACBA08DE396E83CE7845 /* UITextField+Comet.swift */; };
 		6E767938F90A92E1423060190C18F5A7 /* Date+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE73D10521E423EAAFC6A8E42EB578EA /* Date+Comet.swift */; };
+		77F4006A8002D1CC987F40B148853F79 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AA259AB3102B0B8053D01D93283FB10 /* DataBase.swift */; };
 		856221AE2D08E27BB7B7D7739F5BDED2 /* UIResponder+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A791543578C62E2883983294C6CD1435 /* UIResponder+Comet.swift */; };
 		85F39B342CB4739BADC690199A115DF1 /* UINavigationController+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D4A5A711A2A6771939E7D52C8BA048 /* UINavigationController+Comet.swift */; };
-		8C6995CC3BB2E62FEB0C9D84E4D728B0 /* SimpleDataKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7998EE27532AD562850638A5959BE0D /* SimpleDataKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9078FCB5C80FD8E7B108991B9E11EC34 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616523EAE85FF6040244B7FE7C4C4143 /* Query.swift */; };
+		8C6995CC3BB2E62FEB0C9D84E4D728B0 /* SimpleDataKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92D841FACC3C5CABB9DC97FF179DA610 /* SimpleDataKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		990C449F896F5FF9176000821A45409F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9A433A71FB87D4EF4161469E4C21C20F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345646B4F37B08EEB0CC720A6708455A /* DataManager.swift */; };
 		9C803945344839CE1FCE8816AAF6380C /* NSObject+KVOHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFB899195AA0C53BDA7DFA64E63D360 /* NSObject+KVOHandler.swift */; };
 		A27811403E5BDF352CC8004B11126728 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D511818FA375441DD846EF6FD3D67BB3 /* Utils.swift */; };
-		A746033EB414A1395C161F474A7EA936 /* SimpleDataKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FE5AE871FDE60585B015C66E1A49A6 /* SimpleDataKit-dummy.m */; };
 		A8EF0501F01F13F0A6246D6A4CA0E0C7 /* UIBarButtonItem+Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194E209F88E0C99C530119DBBF3260AC /* UIBarButtonItem+Closure.swift */; };
 		B3C3B58D9D1E49AFBBCE3F59025E0260 /* Pods-SimpleDataKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C614FD700D220CEA9A85A97ED4F3EDDD /* Pods-SimpleDataKit_Example-dummy.m */; };
+		B68A4EBE20027509001D02D5 /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68A4EBC200272EA001D02D5 /* Condition.swift */; };
+		B70CB16F08C8D020BAA64BFFC5F6E301 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5930B23CB115C6B7344223204F9627 /* DataManager.swift */; };
 		BC76D3D0CEBC6725C8FDC8BE0D7B78CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		C676535007152B048F76B0B74B76687D /* TaskRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA4453C44DF8E9B0ADC39ACAAE756EB /* TaskRecorder.swift */; };
 		C83D9F9CDB34250989C1B9B4E5A5017C /* Numbers+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF1E9AF666D69CB9B267B2C8E20A298 /* Numbers+Comet.swift */; };
+		C9A666E1CCD8138A0A0295F2F8EDA7A0 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F61D60326DA02281C63497C98D081FB /* Query.swift */; };
 		D17875D6CD9ADD26438B308D47EEDBD1 /* Comet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7590C4FFA185309A6D646A798B9B2D /* Comet-dummy.m */; };
+		D64C4C2969D52D4E81F5A5B78F013F4D /* SimpleDataKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A00EEBCDB900A06CF8B0412A50F26A9E /* SimpleDataKit-dummy.m */; };
+		DBBD2EAE736E617C61FED4C2B122D17A /* SQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5CAEE5310F494E808AEDE1B091276C /* SQLite.swift */; };
 		E11100000ED9910B9738651C17AAB32E /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D666C59CFB20BC05015C91F086EE90 /* KeyboardManager.swift */; };
 		E121F917B58F59F60B57008915F67792 /* Comet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 958D021157B8EECCC36C37C8A1F82FC4 /* Comet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E763D36BE2CE09A7452235346FCC26DC /* DataModel+Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B28E5A5F3E092CB4F6D23AF59472EF /* DataModel+Query.swift */; };
 		EC17C0D97CA7942A4A80C4CE8BB74106 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		EF286A31D22BFAA8DAD6B6DDCC690F11 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BC4F5451BF114969DAAB4326DACD7B /* DataModel.swift */; };
 		FC1D00B01809190E1F06CD0F54A5596F /* PinyinIndexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA604E7CA74F2E0A68B756C0915B6629 /* PinyinIndexer.swift */; };
 		FFE852D0697389A9676783B7E86FCD94 /* UIAlertController+Comet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC63771ED51FB936C1D2B11132B8BBA /* UIAlertController+Comet.swift */; };
 /* End PBXBuildFile section */
@@ -64,57 +67,60 @@
 /* Begin PBXFileReference section */
 		00F07FC6E1FE4D2D10FA1F6D81F9CA43 /* Pods-SimpleDataKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleDataKit_Example-resources.sh"; sourceTree = "<group>"; };
 		09D666C59CFB20BC05015C91F086EE90 /* KeyboardManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyboardManager.swift; path = Comet/Classes/KeyboardManager.swift; sourceTree = "<group>"; };
+		0F61D60326DA02281C63497C98D081FB /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = SimpleDataKit/Classes/Query.swift; sourceTree = "<group>"; };
 		194E209F88E0C99C530119DBBF3260AC /* UIBarButtonItem+Closure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Closure.swift"; path = "Comet/Extensions/UIBarButtonItem+Closure.swift"; sourceTree = "<group>"; };
-		1DEDD5C99F109214D8103EEAC4869F4B /* SimpleDataKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleDataKit-prefix.pch"; sourceTree = "<group>"; };
 		1F3716D479F74096264A0157A9669637 /* UIScrollView+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Comet.swift"; path = "Comet/Extensions/UIScrollView+Comet.swift"; sourceTree = "<group>"; };
 		288D775A7B259612014B3CE50E4F3D2D /* UIVIew+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIVIew+Comet.swift"; path = "Comet/Extensions/UIVIew+Comet.swift"; sourceTree = "<group>"; };
 		2AC63771ED51FB936C1D2B11132B8BBA /* UIAlertController+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+Comet.swift"; path = "Comet/Extensions/UIAlertController+Comet.swift"; sourceTree = "<group>"; };
 		2B57D56C66CDC5DB16157358AC7F143C /* Pods-SimpleDataKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleDataKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		2BF1E9AF666D69CB9B267B2C8E20A298 /* Numbers+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Numbers+Comet.swift"; path = "Comet/Extensions/Numbers+Comet.swift"; sourceTree = "<group>"; };
-		342625540B1BA20A74466A90E2BD8C07 /* SimpleDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SimpleDataKit.modulemap; sourceTree = "<group>"; };
-		345646B4F37B08EEB0CC720A6708455A /* DataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = SimpleDataKit/Classes/DataManager.swift; sourceTree = "<group>"; };
+		305A41549C20499CA5D789DFC0AC5A96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36D62BADC3FF37A87E7C1E931EE8DF00 /* Comet-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Comet-prefix.pch"; sourceTree = "<group>"; };
-		37FE5AE871FDE60585B015C66E1A49A6 /* SimpleDataKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleDataKit-dummy.m"; sourceTree = "<group>"; };
-		39A755F4A5863090E0B48327FE2555E9 /* SimpleDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SimpleDataKit.framework; path = SimpleDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39A755F4A5863090E0B48327FE2555E9 /* SimpleDataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleDataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A5CAEE5310F494E808AEDE1B091276C /* SQLite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SQLite.swift; path = SimpleDataKit/Classes/SQLite.swift; sourceTree = "<group>"; };
+		3A601A181BBCFCE2FDB31257BBCC19F7 /* DataModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = SimpleDataKit/Classes/DataModel.swift; sourceTree = "<group>"; };
 		3C9B2C31AA2F79739F33C5BDCAB632E7 /* UIViewController+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Comet.swift"; path = "Comet/Extensions/UIViewController+Comet.swift"; sourceTree = "<group>"; };
 		3D7590C4FFA185309A6D646A798B9B2D /* Comet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Comet-dummy.m"; sourceTree = "<group>"; };
 		44D4A5A711A2A6771939E7D52C8BA048 /* UINavigationController+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationController+Comet.swift"; path = "Comet/Extensions/UINavigationController+Comet.swift"; sourceTree = "<group>"; };
-		545D1F8863E050B66A775F3EBC870B26 /* Pods_SimpleDataKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleDataKit_Example.framework; path = "Pods-SimpleDataKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		545D1F8863E050B66A775F3EBC870B26 /* Pods_SimpleDataKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDataKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C1605B70C5C58B046CC4C77E07600B1 /* Path.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Path.swift; path = Comet/Classes/Path.swift; sourceTree = "<group>"; };
-		616523EAE85FF6040244B7FE7C4C4143 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = SimpleDataKit/Classes/Query.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		745A036F670F799857D9B3C41F1021B8 /* Pods-SimpleDataKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleDataKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		80D33497E75F6D1223C55F184A9AB3ED /* SimpleDataKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleDataKit.xcconfig; sourceTree = "<group>"; };
-		85B28E5A5F3E092CB4F6D23AF59472EF /* DataModel+Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DataModel+Query.swift"; path = "SimpleDataKit/Classes/DataModel+Query.swift"; sourceTree = "<group>"; };
-		85EF08061E8134DAE12DF2C92E2A52D7 /* Comet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Comet.modulemap; sourceTree = "<group>"; };
-		88BC4F5451BF114969DAAB4326DACD7B /* DataModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = SimpleDataKit/Classes/DataModel.swift; sourceTree = "<group>"; };
+		82350DE2CCCA63CD5B9098CAEE8E5701 /* SimpleDataKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SimpleDataKit.xcconfig; sourceTree = "<group>"; };
+		85EF08061E8134DAE12DF2C92E2A52D7 /* Comet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Comet.modulemap; sourceTree = "<group>"; };
+		8AA259AB3102B0B8053D01D93283FB10 /* DataBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataBase.swift; path = SimpleDataKit/Classes/DataBase.swift; sourceTree = "<group>"; };
 		8BD280DEBE4FEDBBE561A490944779E7 /* String+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Comet.swift"; path = "Comet/Extensions/String+Comet.swift"; sourceTree = "<group>"; };
 		8E1F217C50D0D0F2D953C6450A38DDB1 /* UINavigationBar+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Comet.swift"; path = "Comet/Extensions/UINavigationBar+Comet.swift"; sourceTree = "<group>"; };
 		912F97B52C3F817A8777EEDDBB06EA90 /* Pods-SimpleDataKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleDataKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		92D841FACC3C5CABB9DC97FF179DA610 /* SimpleDataKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleDataKit-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		958D021157B8EECCC36C37C8A1F82FC4 /* Comet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Comet-umbrella.h"; sourceTree = "<group>"; };
 		9C755E2500048BBBAAB23A5C42F461BE /* Comet.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Comet.xcconfig; sourceTree = "<group>"; };
+		A00EEBCDB900A06CF8B0412A50F26A9E /* SimpleDataKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SimpleDataKit-dummy.m"; sourceTree = "<group>"; };
 		A529CB52ACAA81302215064E99B63E3A /* Dispatch+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dispatch+Comet.swift"; path = "Comet/Extensions/Dispatch+Comet.swift"; sourceTree = "<group>"; };
 		A69E57EACE7AACBA08DE396E83CE7845 /* UITextField+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+Comet.swift"; path = "Comet/Extensions/UITextField+Comet.swift"; sourceTree = "<group>"; };
 		A791543578C62E2883983294C6CD1435 /* UIResponder+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIResponder+Comet.swift"; path = "Comet/Extensions/UIResponder+Comet.swift"; sourceTree = "<group>"; };
-		A7998EE27532AD562850638A5959BE0D /* SimpleDataKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleDataKit-umbrella.h"; sourceTree = "<group>"; };
-		AE730350F2B2DA528098CF0D4B6FC8D3 /* Pods-SimpleDataKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SimpleDataKit_Example.modulemap"; sourceTree = "<group>"; };
-		B3ADFB152B6D39D305D5D9E480097ECB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE730350F2B2DA528098CF0D4B6FC8D3 /* Pods-SimpleDataKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SimpleDataKit_Example.modulemap"; sourceTree = "<group>"; };
 		B5A77D277766A5C4EBB3F6EF31888158 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B68A4EBC200272EA001D02D5 /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		BA604E7CA74F2E0A68B756C0915B6629 /* PinyinIndexer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinyinIndexer.swift; path = Comet/Classes/PinyinIndexer.swift; sourceTree = "<group>"; };
+		BB1C33A6AA0C33E94FEF9B98E71E610D /* SimpleDataKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SimpleDataKit-prefix.pch"; sourceTree = "<group>"; };
 		BEA4453C44DF8E9B0ADC39ACAAE756EB /* TaskRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskRecorder.swift; path = Comet/Classes/TaskRecorder.swift; sourceTree = "<group>"; };
 		C614FD700D220CEA9A85A97ED4F3EDDD /* Pods-SimpleDataKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleDataKit_Example-dummy.m"; sourceTree = "<group>"; };
 		CE73D10521E423EAAFC6A8E42EB578EA /* Date+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Comet.swift"; path = "Comet/Extensions/Date+Comet.swift"; sourceTree = "<group>"; };
 		D511818FA375441DD846EF6FD3D67BB3 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Comet/Classes/Utils.swift; sourceTree = "<group>"; };
+		D5761AF40323649F4511D368A42B2031 /* DataModel+Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DataModel+Query.swift"; path = "SimpleDataKit/Classes/DataModel+Query.swift"; sourceTree = "<group>"; };
 		D6E5B4761C5505DDE61E37240FD45421 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6F4A47466A13A7D6E5E67EAD7CFCD9A /* Comet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Comet.framework; path = Comet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F4A47466A13A7D6E5E67EAD7CFCD9A /* Comet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Comet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFB899195AA0C53BDA7DFA64E63D360 /* NSObject+KVOHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+KVOHandler.swift"; path = "Comet/Extensions/NSObject+KVOHandler.swift"; sourceTree = "<group>"; };
 		DEA86EFF3D70BD8EDD9A02AF8F84BBDD /* Pods-SimpleDataKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleDataKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DF95FF56DC103DC11958A0CF8BC661AF /* Pods-SimpleDataKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleDataKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		E14F5C7DC7E17B2F097AC1D5E0C02901 /* UIColor+Comet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Comet.swift"; path = "Comet/Extensions/UIColor+Comet.swift"; sourceTree = "<group>"; };
+		EB645BF5802287F32188004D0E55995A /* SimpleDataKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SimpleDataKit.modulemap; sourceTree = "<group>"; };
 		EDB063396F9B8EE5826C3D57246DCA4B /* Text+Localize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Text+Localize.swift"; path = "Comet/Extensions/Text+Localize.swift"; sourceTree = "<group>"; };
 		EE3F98CEB54A11201D754DD0B193545F /* HairLine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HairLine.swift; path = Comet/Classes/HairLine.swift; sourceTree = "<group>"; };
 		F81A75E769DA9A07D486BEA65BFC70CF /* Pods-SimpleDataKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleDataKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FA5930B23CB115C6B7344223204F9627 /* DataManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = SimpleDataKit/Classes/DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23D2F09A8F8F5DD36AEE6FCAB0BF20B7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				305A41549C20499CA5D789DFC0AC5A96 /* Info.plist */,
+				EB645BF5802287F32188004D0E55995A /* SimpleDataKit.modulemap */,
+				82350DE2CCCA63CD5B9098CAEE8E5701 /* SimpleDataKit.xcconfig */,
+				A00EEBCDB900A06CF8B0412A50F26A9E /* SimpleDataKit-dummy.m */,
+				BB1C33A6AA0C33E94FEF9B98E71E610D /* SimpleDataKit-prefix.pch */,
+				92D841FACC3C5CABB9DC97FF179DA610 /* SimpleDataKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SimpleDataKit";
+			sourceTree = "<group>";
+		};
 		29F2A00B3424468127B919C07EBACB8D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,16 +200,7 @@
 				D511818FA375441DD846EF6FD3D67BB3 /* Utils.swift */,
 				D855BD09E93E1C9FB6EB0A08AD21C25F /* Support Files */,
 			);
-			name = Comet;
 			path = Comet;
-			sourceTree = "<group>";
-		};
-		5C1149EF551A9ECCEF00C5CA91248C34 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ABFE000DD07D08140EA350143CF4667D /* SimpleDataKit */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		6A293DE1C6EFA826C2C7B337C5E9E656 /* Products */ = {
@@ -206,25 +217,12 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				5C1149EF551A9ECCEF00C5CA91248C34 /* Development Pods */,
+				C0AD784129E8BB7421A163FD2739246D /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				29F2A00B3424468127B919C07EBACB8D /* Pods */,
 				6A293DE1C6EFA826C2C7B337C5E9E656 /* Products */,
 				C840EF78BD7085A354CD63E0340BE383 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		ABFE000DD07D08140EA350143CF4667D /* SimpleDataKit */ = {
-			isa = PBXGroup;
-			children = (
-				345646B4F37B08EEB0CC720A6708455A /* DataManager.swift */,
-				88BC4F5451BF114969DAAB4326DACD7B /* DataModel.swift */,
-				85B28E5A5F3E092CB4F6D23AF59472EF /* DataModel+Query.swift */,
-				616523EAE85FF6040244B7FE7C4C4143 /* Query.swift */,
-				ECE5C0064541FE44ABA5B25EE2657164 /* Support Files */,
-			);
-			name = SimpleDataKit;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		B9635BCD4FA88C1642ECC437F3E7290C /* Pods-SimpleDataKit_Example */ = {
@@ -251,6 +249,30 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0AD784129E8BB7421A163FD2739246D /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C78AEB3A832BCB0DFFCAA20E570A8367 /* SimpleDataKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		C78AEB3A832BCB0DFFCAA20E570A8367 /* SimpleDataKit */ = {
+			isa = PBXGroup;
+			children = (
+				8AA259AB3102B0B8053D01D93283FB10 /* DataBase.swift */,
+				B68A4EBC200272EA001D02D5 /* Condition.swift */,
+				FA5930B23CB115C6B7344223204F9627 /* DataManager.swift */,
+				3A601A181BBCFCE2FDB31257BBCC19F7 /* DataModel.swift */,
+				D5761AF40323649F4511D368A42B2031 /* DataModel+Query.swift */,
+				0F61D60326DA02281C63497C98D081FB /* Query.swift */,
+				3A5CAEE5310F494E808AEDE1B091276C /* SQLite.swift */,
+				23D2F09A8F8F5DD36AEE6FCAB0BF20B7 /* Support Files */,
+			);
+			name = SimpleDataKit;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C840EF78BD7085A354CD63E0340BE383 /* Targets Support Files */ = {
@@ -281,20 +303,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Comet";
-			sourceTree = "<group>";
-		};
-		ECE5C0064541FE44ABA5B25EE2657164 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B3ADFB152B6D39D305D5D9E480097ECB /* Info.plist */,
-				342625540B1BA20A74466A90E2BD8C07 /* SimpleDataKit.modulemap */,
-				80D33497E75F6D1223C55F184A9AB3ED /* SimpleDataKit.xcconfig */,
-				37FE5AE871FDE60585B015C66E1A49A6 /* SimpleDataKit-dummy.m */,
-				1DEDD5C99F109214D8103EEAC4869F4B /* SimpleDataKit-prefix.pch */,
-				A7998EE27532AD562850638A5959BE0D /* SimpleDataKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SimpleDataKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,7 +375,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C41B62E8C2B26F6BA8F83EF2E5D9D19 /* Build configuration list for PBXNativeTarget "SimpleDataKit" */;
 			buildPhases = (
-				98E54B9F29E5D64B6596DE46E584F3E7 /* Sources */,
+				89AB6F19991925E1E5CC3A109D6D1E1C /* Sources */,
 				2D1DC67E36639EAD29002E936C70646D /* Frameworks */,
 				B761B66F3C49CA56DC8880B5E18A6B68 /* Headers */,
 			);
@@ -439,23 +447,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		89AB6F19991925E1E5CC3A109D6D1E1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77F4006A8002D1CC987F40B148853F79 /* DataBase.swift in Sources */,
+				B68A4EBE20027509001D02D5 /* Condition.swift in Sources */,
+				B70CB16F08C8D020BAA64BFFC5F6E301 /* DataManager.swift in Sources */,
+				2E420730CE145FDC0AF35A5A6C747901 /* DataModel+Query.swift in Sources */,
+				2295B0EE95463EFF0F7FF7561745B8ED /* DataModel.swift in Sources */,
+				C9A666E1CCD8138A0A0295F2F8EDA7A0 /* Query.swift in Sources */,
+				D64C4C2969D52D4E81F5A5B78F013F4D /* SimpleDataKit-dummy.m in Sources */,
+				DBBD2EAE736E617C61FED4C2B122D17A /* SQLite.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8F99B31E3DB8136A447D2E3D0B460731 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B3C3B58D9D1E49AFBBCE3F59025E0260 /* Pods-SimpleDataKit_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		98E54B9F29E5D64B6596DE46E584F3E7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A433A71FB87D4EF4161469E4C21C20F /* DataManager.swift in Sources */,
-				E763D36BE2CE09A7452235346FCC26DC /* DataModel+Query.swift in Sources */,
-				EF286A31D22BFAA8DAD6B6DDCC690F11 /* DataModel.swift in Sources */,
-				9078FCB5C80FD8E7B108991B9E11EC34 /* Query.swift in Sources */,
-				A746033EB414A1395C161F474A7EA936 /* SimpleDataKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +584,7 @@
 		};
 		22B058E6A0ED5BA2C2E80700F3F67705 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80D33497E75F6D1223C55F184A9AB3ED /* SimpleDataKit.xcconfig */;
+			baseConfigurationReference = 82350DE2CCCA63CD5B9098CAEE8E5701 /* SimpleDataKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -636,7 +647,7 @@
 		};
 		6267D702B060E45C32183D04C2B923F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80D33497E75F6D1223C55F184A9AB3ED /* SimpleDataKit.xcconfig */;
+			baseConfigurationReference = 82350DE2CCCA63CD5B9098CAEE8E5701 /* SimpleDataKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
