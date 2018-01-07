@@ -22,7 +22,7 @@
 
 /* Begin PBXFileReference section */
 		234ECDF931720C35CCF4580A /* Pods-SimpleDataKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDataKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDataKit_Example/Pods-SimpleDataKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		34748E60AEAA6232DC2636BB /* SimpleDataKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SimpleDataKit.podspec; path = ../SimpleDataKit.podspec; sourceTree = "<group>"; };
+		34748E60AEAA6232DC2636BB /* SimpleDataKit.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = SimpleDataKit.podspec.json; path = ../SimpleDataKit.podspec.json; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SimpleDataKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDataKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				34748E60AEAA6232DC2636BB /* SimpleDataKit.podspec */,
+				34748E60AEAA6232DC2636BB /* SimpleDataKit.podspec.json */,
 				69F60BEE1AA3D0B6DEB52E0A /* README.md */,
 				6DB204CF188F1F5248DC7B83 /* LICENSE */,
 			);
