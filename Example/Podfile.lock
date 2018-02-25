@@ -1,6 +1,10 @@
 PODS:
   - Comet (1.1.5)
-  - SimpleDataKit (0.5.0)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - SimpleDataKit (0.6.0):
+    - FMDB (~> 2.7)
 
 DEPENDENCIES:
   - Comet (from `https://github.com/Harley-xk/Comet.git`)
@@ -19,7 +23,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Comet: c6ab849dc997e3251abbedde32fe16e78278ec8c
-  SimpleDataKit: 3e20786e50e56fcbd786cf511065a4755afa0a70
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  SimpleDataKit: 6a04eb0340b23f8939097b3c3752e388130d28a7
 
 PODFILE CHECKSUM: d75d2f92f0bc17f09daeffb0bf879dfcba3958e6
 

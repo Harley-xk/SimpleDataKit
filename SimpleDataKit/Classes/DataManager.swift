@@ -19,6 +19,7 @@ open class DataManager {
     open private(set) var context: NSManagedObjectContext!
 
     public typealias ContextSetupResult = (Error?) -> Void
+    
     open func setupContext(with momdName: String = "Data", completion: ContextSetupResult? = nil) {
         if #available(iOS 10.0, *) {
             let container = NSPersistentContainer(name: momdName)

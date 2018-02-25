@@ -6,11 +6,12 @@
 //
 
 import Foundation
+import FMDB
 
 class DataBase {
     
     init(path: URL, reserved: URL? = nil) {
-        
+        FMDatabase(url: path)
     }
     
     

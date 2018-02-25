@@ -15,21 +15,13 @@ import Foundation
 //    <#requirements#>
 //}
 
-extension AnyKeyPath {
-    var string: String {
-        return _kvcKeyPathString!
-    }
-}
-
 struct Condition {
     
     init() {
-        
     }
     init<Table: SQLiteTable, Property: DataType>(_ key: KeyPath<Table, Property>, in values: [Property]) {
-        let name = key.string
+        let field = Table.columns[]
         
-        name
     }
     
 }

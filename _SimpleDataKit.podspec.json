@@ -19,7 +19,5 @@
         "ios": "8.0"
     },
     "source_files": "SimpleDataKit/**/*",
-    "dependency": [
-        "FMDB"
-    ]
+    "dependency": "FMDB"
 }

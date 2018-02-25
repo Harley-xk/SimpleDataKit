@@ -13,6 +13,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		B64CCB2F200E3E85003E602A /* SimpleDataKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = B64CCB2E200E3E85003E602A /* SimpleDataKit.podspec */; };
 		C36926FE1E99D781003F35C7 /* AddStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36926FD1E99D781003F35C7 /* AddStudentViewController.swift */; };
 		C3E5691E1E9E746C001FDD99 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5691D1E9E746C001FDD99 /* Student.swift */; };
 		C3E569221E9E80BA001FDD99 /* SearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E569211E9E80BA001FDD99 /* SearchingViewController.swift */; };
@@ -22,7 +23,6 @@
 
 /* Begin PBXFileReference section */
 		234ECDF931720C35CCF4580A /* Pods-SimpleDataKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDataKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDataKit_Example/Pods-SimpleDataKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		34748E60AEAA6232DC2636BB /* SimpleDataKit.podspec.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; name = SimpleDataKit.podspec.json; path = ../SimpleDataKit.podspec.json; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SimpleDataKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDataKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +35,7 @@
 		8CCB27165B14E9402156DF75 /* Pods_SimpleDataKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDataKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01F5CADEC976FAD52E0EDC5 /* Pods-SimpleDataKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleDataKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleDataKit_Tests/Pods-SimpleDataKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A7DF673DFF8E3E48057463BB /* Pods_SimpleDataKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleDataKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B64CCB2E200E3E85003E602A /* SimpleDataKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = SimpleDataKit.podspec; path = ../SimpleDataKit.podspec; sourceTree = "<group>"; };
 		C36926FD1E99D781003F35C7 /* AddStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStudentViewController.swift; sourceTree = "<group>"; };
 		C3E5691D1E9E746C001FDD99 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		C3E569211E9E80BA001FDD99 /* SearchingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchingViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +121,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				34748E60AEAA6232DC2636BB /* SimpleDataKit.podspec.json */,
+				B64CCB2E200E3E85003E602A /* SimpleDataKit.podspec */,
 				69F60BEE1AA3D0B6DEB52E0A /* README.md */,
 				6DB204CF188F1F5248DC7B83 /* LICENSE */,
 			);
@@ -219,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				B64CCB2F200E3E85003E602A /* SimpleDataKit.podspec in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -253,11 +255,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleDataKit_Example/Pods-SimpleDataKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Comet/Comet.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/SimpleDataKit/SimpleDataKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Comet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleDataKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

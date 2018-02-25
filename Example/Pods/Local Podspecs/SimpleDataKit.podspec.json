@@ -1,8 +1,7 @@
 {
   "name": "SimpleDataKit",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "summary": "Simple ORM framework based on SQLite.",
-  "description": "SimpleDataKit is a simple ORM framework based on SQLite. And is Inspired by Eloquent in Laravel.",
   "homepage": "https://github.com/Harley-xk/SimpleDataKit",
   "license": {
     "type": "MIT",
@@ -13,13 +12,15 @@
   },
   "source": {
     "git": "https://github.com/Harley-xk/SimpleDataKit.git",
-    "tag": "0.5.0"
+    "tag": "0.6.0"
   },
   "platforms": {
     "ios": "8.0"
   },
   "source_files": "SimpleDataKit/**/*",
-  "dependency": [
-    "FMDB"
-  ]
+  "dependencies": {
+    "FMDB": [
+      "~> 2.7"
+    ]
+  }
 }
